@@ -12,10 +12,10 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "client-install": "cd client && npm install",
+    "client-install": "cd ../client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
