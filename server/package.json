@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Node.js template RESTful server",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MrPocketsss/React_Node_Template.git"
+  },
+  "author": "Joshua Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrPocketsss/React_Node_Template/issues"
+  },
+  "homepage": "https://github.com/MrPocketsss/React_Node_Template#readme"
+}
