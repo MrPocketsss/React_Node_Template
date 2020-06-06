@@ -1,0 +1,54 @@
+('/')                                             Main landing page
+  ::GET                                             Should push all the information needed to set up the react side
+
+  ('/tickets')                                      router for handling ticket requests
+    ::GET                                             sends ticket landing page info
+
+    ('/new')                                          router for handling new ticket requests
+      ::GET                                              sends info to initialize dropdown info
+      ::POST                                             receives and processes new ticket form
+    ('/one')                                          router for handling specific ticket requests
+      ::GET                                             sends info relating to the ticket requested
+      ::PATCH                                           Modifies the ticket info
+      ::DELETE                                          Deletes the ticket
+  ('/clients')                                      router for handling client requests
+    ::GET                                             sends client landing page info
+    
+    ('/personnel')                                    router for handling personnel routes
+      ::GET                                             sends personnel landing page info
+
+      ('/new')                                          router for handling new personnel requests
+        ::GET                                             sends info to initalize dropdown info
+        ::POST                                            receives and processes new personnel info
+      ('/personnelID')                                  router for handling specific personnel requests
+        ::GET                                             sends info related to the personnel requested
+        ::PATCH                                           modifies the personnel info
+        ::DELETE                                          delets the personnel
+    ('/company')                                      router for handling company requests
+      ::GET                                             sends company landing page
+
+      ('/new')                                          router for handling new company requests
+        ::GET                                             sends info to initialize dropdown info
+        ::POST                                            receives and processes company requests
+      ('/companyID')                                    router for handling specific company info
+        ::GET                                             sends info related to specific company requested
+        ::PATCH                                           modifies the company info
+        ::DELETE                                          deletes the company
+  ('/account')                                      router for handling user account requests
+    ::GET                                             sends basic account info, also handles login (?)
+    ::POST(?)                                         handles login submissions(?)
+    
+    ('/:userID')                                      router for handing a speicific user
+      ::GET                                             sends the info related to the user
+      ::PATCH                                           modifies user info
+      ::DELETE                                          deletes the user
+  ('/kb')                                           router for handling knowledge base requests
+    ::GET                                             sends info for knowledge base landing page
+
+    ('/new')                                          router for handling new knowledge base article
+      ::GET                                             sends the info to initialize dropdowns
+      ::POST                                            receives and processes new article requests
+    ('/:articleID')                                   router for handling specific article requests
+      ::GET                                             sends info related to a specific article
+      ::PATCH                                           modifies the article info
+      ::DELETE                                          deletes the article
