@@ -6,6 +6,8 @@ const router = express.Router()
 
 const User = require('../../models/User')
 
+const TIME_TO_EXPIRE = 3600 //in seconds (1 hour)
+
 router.post("/",
   [
     check("email", "Please enter a valid email").isEmail(),
@@ -32,7 +34,7 @@ router.post("/",
       
       const payload = { user: { id: user.id } }
 
-      jwt.sign(payload, "randomString", { expiresIn: 3600 },
+      jwt.sign(payload, "randomString", { expiresIn: TIME_TO_EXPIRE },
         (err, token) => {
           if (err) throw err
           res.status(200).json({ token })

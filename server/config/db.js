@@ -5,7 +5,8 @@ const InitiateMongoServer = async (uri) => {
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useCreateIndex: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useFindAndModify: false
     })
     console.log('Connected to the database')
   } catch (e) {

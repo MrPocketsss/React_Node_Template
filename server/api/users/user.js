@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const registerRoutes = require('./register')
-const loginRoutes = require('./login.js')
+const loginRoutes = require('./login')
 const authRoutes = require('./me')
 
 router.use('/register', registerRoutes)

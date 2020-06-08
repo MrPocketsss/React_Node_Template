@@ -25,9 +25,6 @@ router.post("/",
       }
 
       const { username, email, password } = req.body
-      console.log('username: ' + username)
-      console.log('email: ' + email)
-      console.log('password: ' + password)
       try {
           let user = await User.findOne({ email })
           if (user) {
