@@ -34,14 +34,13 @@
         ::GET                                             sends info related to specific company requested
         ::PATCH                                           modifies the company info
         ::DELETE                                          deletes the company
-  ('/account')                                      router for handling user account requests
-    ::GET                                             sends basic account info, also handles login (?)
-    ::POST(?)                                         handles login submissions(?)
-    
-    ('/:userID')                                      router for handing a speicific user
-      ::GET                                             sends the info related to the user
-      ::PATCH                                           modifies user info
-      ::DELETE                                          deletes the user
+  ('/users')                                        router for handling user info
+    ('/register')                                     router for handling user registration
+      ::POST                                            receives and processes new user registration forms
+    ('/login)                                         router for handling login requests
+      ::POST                                            receives and processes login requests
+    ('/me')                                           router for handling authentication
+      ::POST                                            receives and processes whether a user is logged in
   ('/kb')                                           router for handling knowledge base requests
     ::GET                                             sends info for knowledge base landing page
 
